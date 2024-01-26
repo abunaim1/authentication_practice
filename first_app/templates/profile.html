@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Welcome to profile {{user}}</h1>
+{% if user.is_authenticated %}
+<button class="btn btn-warning"><a class="text-decoration-none text-dark" href="{% url 'password2' %}">Change Your password without Old</a></button>
+<button class="btn btn-danger"><a class="text-decoration-none text-light" href="{% url 'password' %}">Change Your password with Old</a></button>
+{% endif %}
+{% endblock %}
